@@ -1,0 +1,73 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  &-header {
+    padding-top: 50px;
+  }
+
+  &-intro {
+    max-width: 742px;
+  }
+
+  &-services {
+    @include flexes;
+
+    flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &-process {
+    @include flexes;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &-testimonials {
+    @include flexes;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &-features {
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &-cta {
+    text-align: center;
+    max-width: 804px;
+  }
+
+  &-contactus {
+    @include flexes;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &-footer {
+    @include flexes;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    @include mobileL {
+      text-align: center;
+      flex-direction: column-reverse;
+    }
+  }
+}

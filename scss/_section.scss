@@ -1,0 +1,42 @@
+.section {
+  background-color: $section-color;
+  padding: 160px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobileL {
+    padding: 60px 0;
+  }
+
+  &-light {
+    background-color: $light-color;
+  }
+
+  &__inner {
+    max-width: 362px;
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 20px;
+
+    &>img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__subtitle {
+    padding-left: 15px;
+    font-weight: 800;
+    color: $theme-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__title {
+    font-size: $secondary-title-size;
+  }
+}

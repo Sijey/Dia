@@ -1,0 +1,53 @@
+.cta {
+  padding: 220px 0 200px;
+  margin-top: -100px;
+  background: #FCFCFD url("../images/cta/cta-bg.png") no-repeat 0 60px;
+  background-size: contain;
+
+  &__title {
+    font-size: $main-title-size;
+    line-height: 1;
+    margin-bottom: 55px;
+
+    @include mobileL {
+      font-size: 40px;
+    }
+
+    @include mobileS {
+      font-size: 31px;
+    }
+  }
+
+  &__parah {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 55px;
+
+    @include mobileL {
+      font-size: 21px;
+    }
+  }
+
+  &__button {
+    padding: 18px 88px;
+    background: #2F80ED;
+    color: #FFF;
+    text-decoration: none;
+    margin: 0 auto;
+    border: 2px solid #2F80ED;
+
+    &:hover {
+      background-color: #FFF;
+      color: #2F80ED;
+    }
+
+    &:active {
+      background-color: darken(#FFF, 10%);
+    }
+  }
+
+  @include tablet {
+    padding: 220px 0 100px;
+  }
+
+}

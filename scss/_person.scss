@@ -1,0 +1,70 @@
+.person {
+
+  &::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 162px;
+    border-radius: 500px;
+    transform: rotate(25deg);
+    position: absolute;
+    top: 45px;
+    left: calc(50% - 32px);
+  }
+
+  &_1 {
+
+    &:hover {
+      box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      background-color: #56CCF2;
+    }
+  }
+
+  &_2 {
+
+    &:hover {
+      box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      background-color: #FCC304;
+    }
+  }
+
+  &_3 {
+
+    &:hover {
+      box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      background-color: #F25656;
+    ;
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__txt {
+    font-size: 15px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 2px;
+      margin: 30px auto;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,261 @@
+.header {
+  background: linear-gradient(-245deg, $theme-color 78%-#{$photo-width}, #FCFCFD 22%) no-repeat;
+  color: $light-color;
+  background-position-y: calc(100% - (#{$photo-height} / 2));
+  padding: 0;
+
+  @include tablet {
+    background: $theme-color;
+  }
+
+  &__top {
+    @include flexes;
+
+    max-width: 950px;
+    align-items: center;
+    margin-bottom: 80px;
+    font-weight: 700;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__logo {
+
+    @include href;
+
+    font-size: $secondary-title-size;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__nav {
+    flex-basis: 560px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__menu {
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+
+    &_active {
+      position: relative;
+      width: max-content;
+      padding: 0 6px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    &_active::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: -9px;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FCC304;
+      border-radius: 32px;
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      bottom: -9px;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #FCC304;
+      border-radius: 32px;
+
+      @include mobileL {
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3px;
+      }
+    }
+  }
+
+  &__inner {
+    max-width: 755px;
+    margin-left: 100px;
+
+    @include tablet {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: 64px;
+    margin-bottom: 22px;
+
+    @include mobileL {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-bottom: 42px;
+
+    @include mobileL {
+      font-size: 21px;
+    }
+  }
+
+  &__button {
+    padding: 16px 65px;
+    background-color: #fff;
+    color: $main-color;
+    margin-bottom: 80px;
+    border: 2px solid #FFF;
+    transition: .2s;
+
+    &:hover {
+      background-color: $theme-color;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: darken($theme-color, 10%);
+    }
+
+    @include tablet {
+      margin: 0 auto 80px;
+    }
+  }
+
+  &__photo {
+    position: relative;
+
+    &>img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    &_text {
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+      max-width: 264px;
+
+      &>h4 {
+        font-weight: 800;
+        font-size: 13px;
+        color: $theme-color;
+        text-transform: uppercase;
+
+        @include mobileL {
+          font-size: 10px;
+        }
+      }
+
+      &>p {
+        font-size: 20px;
+
+        @include mobileL {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    justify-content: space-between;
+    background-color: #FCC304;
+    border-radius: 50px;
+    padding: 20px 35px;
+    width: 160px;
+    transform: translate(-50%, -50%);
+
+    @include desktopXl {
+      top: auto;
+      bottom: 0;
+      left: 50%;
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__right,
+  &__left {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+
+    &:hover {
+      border-color: darken(#FCC304, 5%);
+      cursor: pointer;
+    }
+
+    &:active {
+      border-color: darken(#FCC304, 5%)
+    }
+  }
+
+  &__right {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+
+  &__left {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    font-size: 12px;
+    left: 105%;
+    top: 50%;
+    font-weight: 800;
+    width: 640px;
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    &>li {
+      transform: rotate(-90deg);
+      &:hover {
+        transform: scale(1.2) rotate(-90deg);
+      }
+    }
+
+    @include desktopXl {
+      top: auto;
+      left: 50%;
+      bottom: -40px;
+      transform: translate(-50%);
+      justify-content: space-between;
+
+      & > li {
+        transform: rotate(0deg);
+      }
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+}

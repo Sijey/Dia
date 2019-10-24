@@ -1,0 +1,131 @@
+.process {
+  background-color: #FCFCFD;
+  padding-bottom: 0;
+
+  &__top {
+    margin-bottom: 21px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__texts {
+    max-width: 362px;
+
+    &>p {
+      padding-bottom: 20px;
+    }
+
+    @include tablet {
+      max-width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    grid-template-rows: 340px 340px;
+    column-gap: 58px;
+    row-gap: 18px;
+
+    @include tablet {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include mobile {
+      justify-content: center;
+      grid-template-columns: 75%;
+      grid-template-rows: repeat(4, 256px);
+    }
+  }
+
+  &__item {
+    text-align: center;
+    box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.02);
+    height: 256px;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 48px 32px;
+    transition: .5s;
+
+    &:nth-child(2n+1) {
+      align-self: flex-end;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @include mobile {
+      &:nth-child(2n+1) {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &__num {
+    font-size: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      opacity: .1;
+      position: absolute;
+      left: calc(50% - 24px);
+      top: calc(50% - 48px)
+    }
+
+    &-1 {
+      color: #56CCF2;
+
+      &::after {
+        background-color: #56CCF2;
+      }
+    }
+
+    &-2 {
+      color: #FCC304;
+
+      &::after {
+        background-color: #FCC304;
+      }
+    }
+
+    &-3 {
+      color: #03D542;
+
+      &::after {
+        background-color: #03D542;
+      }
+    }
+
+    &-4 {
+      color: #F25656;
+
+      &::after {
+        background-color: #F25656;
+      }
+    }
+  }
+
+
+
+  &__description {
+    font-size: 13px;
+  }
+
+}
