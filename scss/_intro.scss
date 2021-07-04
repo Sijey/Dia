@@ -1,0 +1,15 @@
+.intro {
+
+  &__top {
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 24px;
+
+    @include mobileL {
+      font-size: 21px;
+    }
+  }
+}

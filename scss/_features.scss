@@ -1,0 +1,72 @@
+.features {
+  background: $theme-color url("../images/features/bg.jpg") no-repeat center/cover;
+  padding: 200px 0 160px;
+  margin-top: -120px;
+
+  @include mobile {
+    background-image: none;
+    padding-bottom: 65px;
+  }
+
+  &__top {
+    margin-bottom: 70px;
+  }
+
+  &__subtitle {
+    color: $light-color;
+  }
+
+  &__texts {
+    max-width: 362px;
+
+    @include mobile {
+      max-width: 662px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__parah {
+    color: $light-color;
+    max-width: 263px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__icon_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
